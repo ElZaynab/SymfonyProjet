@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DummyController!{% endblock %}
+{% block stylesheets %}
+    {{parent()}}
+    <style>
+        h1{
+            color:red;
+        }
+    </style>
+{% endblock %}
+{% block body %}
+{{ include('partials/_navbar.html.twig') }} 
+
+<div class="example-wrapper">
+    <h1>{{ text }}</h1>
+
+    
+    <ul>
+        {% for year in years %}
+        <li> {{year}} </li>
+        {%endfor%}
+    </ul>
+</div>
+{% endblock %}
